@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="margin-bottom: 250px;">
+    <!-- As a link -->
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">PARO NACIONAL</a>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center align-items-center">
+                <img onclick="cambio_imagen()" id="imagen_paro" src="https://as01.epimg.net/colombia/imagenes/2021/05/01/actualidad/1619875344_462647_1619921565_noticia_normal_recorte1.jpg">
+            </div>
+        </div>
+        <form>
+            <div class="form-group">
+                <label for="cant_personas">Cual es la cantidad de personas que estan en el paro?</label>
+                <input type="number" placeholder="coloca la cantidad" min="100" max="1000" class="form-control" id="cant_personas" aria-describedby="emailHelp">
+                <button type="button" class="btn btn-primary" onclick="personas_paro()">Calcular</button>
+            </div>
+        </form>
+        <hr>
+        <button type="button" class="btn btn-warning" onclick="ciclos()">Ejecutar</button>
+        <hr>
+        <h1>Tablas de multiplicar</h1>
+        <form>
+            <div class="form-group">
+                <label for="valor_tabla">Valor a consultar la tabla</label>
+                <input type="number" class="form-control valor_tabla" id="valor_tabla">
+            </div>
+            <div class="form-group">
+                <label for="valor_max_tabla">Valor maximo de la tabla</label>
+                <input type="number" class="form-control" id="valor_max_tabla">
+            </div>
+            <button type="button" class="btn btn-primary" onclick="multiplicaciones()">Calcular</button>
+        </form>
+        <hr>
+        <h1>Calculadora</h1>
+        <form>
+            <!-- <div class="form-group">
+                <label for="valor1_calculadora">Valor 1</label>
+                <input type="number" class="form-control valor_tabla" id="valor1_calculadora">
+            </div>
+            <div class="form-group">
+                <label for="valor2_calculadora">Valor 2</label>
+                <input type="number" class="form-control" id="valor2_calculadora">
+            </div> -->
+
+            <div class="row">
+                <div class="col-3">
+                    <div class="grilla-botones">
+                        <div onclick="guardar_dato(1)" class="tecla1">1</div>
+                        <div onclick="guardar_dato(2)" class="tecla2">2</div>
+                        <div onclick="guardar_dato(3)" class="tecla3">3</div>
+                        <div onclick="guardar_dato(4)" class="tecla4">4</div>
+                        <div onclick="guardar_dato(5)" class="tecla5">5</div>
+                        <div onclick="guardar_dato(6)" class="tecla6">6</div>
+                        <div onclick="guardar_dato(7)" class="tecla7">7</div>
+                        <div onclick="guardar_dato(8)" class="tecla8">8</div>
+                        <div onclick="guardar_dato(9)" class="tecla9">9</div>
+                        <div onclick="guardar_dato(0)" class="tecla0">0</div>
+                        <div onclick="calcular_dato('=')" class="tecla-igual">=</div>
+                        <div onclick="borrar()" class="tecla-c">C</div>
+                    </div>
+                    <br>
+
+                    <div class="d-flex justify-content-center align-items-center">
+                        <button type="button" class="btn btn-dark m-1" onclick="guardar_dato('+')">+</button>
+                        <button type="button" class="btn btn-dark m-1" onclick="guardar_dato('-')">-</button>
+                        <button type="button" class="btn btn-dark m-1" onclick="guardar_dato('*')">x</button>
+                        <button type="button" class="btn btn-dark m-1" onclick="guardar_dato('/')">/</button>
+                    </div>
+                    <div id="resultado_calculadora"></div>
+                </div>
+            </div>
+        </form>
+        <hr>
+        <h1>Arreglos</h1>
+        <button class="btn btn-danger" onclick="arreglos_vectores()">Declarar</button>
+        <div id="result_matriz"></div>
+        <select name="" id="lista_estudiantes"></select>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="code.js"></script>
+</body>
+
+</html>

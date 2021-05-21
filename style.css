@@ -1,0 +1,22 @@
+.grilla-botones {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.tecla-igual {
+    grid-column: 2/4;
+}
+
+.grilla-botones div {
+    background-color: #00ffff;
+    color: #000;
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.grilla-botones div:hover {
+    background-color: rgb(131, 156, 156);
+}
