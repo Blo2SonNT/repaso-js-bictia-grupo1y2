@@ -20,3 +20,17 @@
 .grilla-botones div:hover {
     background-color: rgb(131, 156, 156);
 }
+
+.estado1 {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: rgb(53, 224, 38);
+}
+
+.estado2 {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: rgb(226, 37, 37);
+}
